@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ThoughtSpot Embedded Liveboard - CSS Examples</title>
+  
+  <!-- Example 1: Using the starter CSS -->
+  <link rel="stylesheet" href="../css/liveboard-starter.css">
+  
+  <!-- Example 2: Or use a theme instead -->
+  <!-- <link rel="stylesheet" href="../css/themes/dark-theme.css"> -->
+  <!-- <link rel="stylesheet" href="../css/themes/light-minimal.css"> -->
+  <!-- <link rel="stylesheet" href="../css/themes/corporate-blue.css"> -->
+  
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    .demo-section {
+      margin-bottom: 40px;
+    }
+    
+    h1 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+    
+    .subtitle {
+      color: #666;
+      margin-bottom: 30px;
+    }
+    
+    .code-block {
+      background: #f5f5f5;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 15px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    
+    code {
+      font-family: 'Courier New', monospace;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>ThoughtSpot Embedded Liveboard - CSS Customization Examples</h1>
+    <p class="subtitle">Demonstration of customizable components for ThoughtSpot embedded analytics</p>
+    
+    <!-- Custom Font Information -->
+    <div class="demo-section">
+      <h2>Custom Typography</h2>
+      <p>All text on this page uses the <strong>TT Norms Pro Variable</strong> font, a modern variable font that supports a wide range of weights (100-900). The font provides a professional, clean appearance suitable for data visualization and analytics dashboards.</p>
+      <div style="background: #f9f9f9; padding: 20px; border-radius: 8px; margin-top: 16px;">
+        <p style="margin: 0 0 12px 0; font-weight: 300; font-size: 18px;">TT Norms Pro Variable - Light (300)</p>
+        <p style="margin: 0 0 12px 0; font-weight: 400; font-size: 18px;">TT Norms Pro Variable - Regular (400)</p>
+        <p style="margin: 0 0 12px 0; font-weight: 500; font-size: 18px;">TT Norms Pro Variable - Medium (500)</p>
+        <p style="margin: 0 0 12px 0; font-weight: 600; font-size: 18px;">TT Norms Pro Variable - Semibold (600)</p>
+        <p style="margin: 0; font-weight: 700; font-size: 18px;">TT Norms Pro Variable - Bold (700)</p>
+      </div>
+      <div style="margin-top: 20px; padding: 15px; background: #f9f9f9; border-radius: 4px;">
+        <strong>Font Configuration:</strong>
+        <pre style="margin-top: 10px; background: white; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>@font-face {
+  font-family: 'TT Norms Pro Variable';
+  src: url('https://helix-builder.staging.helix.com/assets/TTNormsProVariable-b8ab4b19.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+:root {
+  --ts-var-root-font-family: 'TT Norms Pro Variable', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}</code></pre>
+      </div>
+    </div>
+    
+    <!-- Liveboard Header Example -->
+    <div class="demo-section">
+      <h2>Liveboard Header</h2>
+      <div class="liveboard-header">
+        <h1 class="liveboard-title">Sales Performance Dashboard</h1>
+        <p class="liveboard-description">Year-to-date metrics and trends for regional sales performance</p>
+      </div>
+    </div>
+    
+    <!-- Buttons Example -->
+    <div class="demo-section">
+      <h2>Buttons</h2>
+      <button class="ts-button--primary">Primary Action</button>
+      <button class="ts-button--secondary">Secondary Action</button>
+    </div>
+    
+    <!-- Chart Color Palette Preview -->
+    <div class="demo-section">
+      <h2>Chart Color Palette</h2>
+      <p>These are the 5 customizable chart colors used in visualizations:</p>
+      <div style="display: flex; gap: 16px; margin-top: 16px; flex-wrap: wrap;">
+        <div style="text-align: center;">
+          <div class="chart-series-1" style="width: 100px; height: 100px; border-radius: 8px; margin-bottom: 8px;"></div>
+          <code style="font-size: 12px;">--ts-var-viz-color-1</code>
+        </div>
+        <div style="text-align: center;">
+          <div class="chart-series-2" style="width: 100px; height: 100px; border-radius: 8px; margin-bottom: 8px;"></div>
+          <code style="font-size: 12px;">--ts-var-viz-color-2</code>
+        </div>
+        <div style="text-align: center;">
+          <div class="chart-series-3" style="width: 100px; height: 100px; border-radius: 8px; margin-bottom: 8px;"></div>
+          <code style="font-size: 12px;">--ts-var-viz-color-3</code>
+        </div>
+        <div style="text-align: center;">
+          <div class="chart-series-4" style="width: 100px; height: 100px; border-radius: 8px; margin-bottom: 8px;"></div>
+          <code style="font-size: 12px;">--ts-var-viz-color-4</code>
+        </div>
+        <div style="text-align: center;">
+          <div class="chart-series-5" style="width: 100px; height: 100px; border-radius: 8px; margin-bottom: 8px;"></div>
+          <code style="font-size: 12px;">--ts-var-viz-color-5</code>
+        </div>
+      </div>
+      <div style="margin-top: 20px; padding: 15px; background: #f9f9f9; border-radius: 4px;">
+        <strong>Customization Example:</strong>
+        <pre style="margin-top: 10px; background: white; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>:root {
+  --ts-var-viz-color-1: #1976d2;  /* Primary blue */
+  --ts-var-viz-color-2: #42a5f5;  /* Light blue */
+  --ts-var-viz-color-3: #64b5f6;  /* Lighter blue */
+  --ts-var-viz-color-4: #90caf9;  /* Pale blue */
+  --ts-var-viz-color-5: #bbdefb;  /* Very pale blue */
+}</code></pre>
+      </div>
+    </div>
+    
+    <!-- Visualization Tile Example -->
+    <div class="demo-section">
+      <h2>Visualization Tile</h2>
+      <div class="visualization-tile">
+        <div class="visualization-title">Revenue by Region</div>
+        <div class="chart-container" style="height: 200px; background: #f9f9f9; display: flex; align-items: center; justify-content: center; color: #999;">
+          Chart visualization would appear here
+        </div>
+      </div>
+    </div>
+    
+    <!-- Table Example -->
+    <div class="demo-section">
+      <h2>Data Table</h2>
+      <table class="ts-table">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Revenue</th>
+            <th>Units Sold</th>
+            <th>Growth</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Product A</td>
+            <td>$125,000</td>
+            <td>1,234</td>
+            <td>+12.5%</td>
+          </tr>
+          <tr>
+            <td>Product B</td>
+            <td>$98,500</td>
+            <td>892</td>
+            <td>+8.3%</td>
+          </tr>
+          <tr>
+            <td>Product C</td>
+            <td>$156,200</td>
+            <td>1,567</td>
+            <td>+15.7%</td>
+          </tr>
+          <tr>
+            <td>Product D</td>
+            <td>$203,400</td>
+            <td>2,145</td>
+            <td>+18.2%</td>
+          </tr>
+          <tr>
+            <td>Product E</td>
+            <td>$87,600</td>
+            <td>756</td>
+            <td>+5.8%</td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="margin-top: 20px; padding: 15px; background: #f9f9f9; border-radius: 4px;">
+        <strong>Table Color Customization:</strong>
+        <p style="margin-top: 10px; margin-bottom: 10px;">The following CSS variables control table appearance:</p>
+        <pre style="background: white; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>:root {
+  /* Table header styling */
+  --ts-var-table-header-background: #f5f5f5;
+  --ts-var-table-header-color: #333333;
+  --ts-var-table-header-border: #e0e0e0;
+  
+  /* Table row styling */
+  --ts-var-table-row-background: #ffffff;
+  --ts-var-table-row-alt-background: #fafafa;  /* Alternating rows */
+  --ts-var-table-row-hover-background: #f5f5f5;  /* Hover state */
+  
+  /* Table text and borders */
+  --ts-var-table-border-color: #f0f0f0;
+  --ts-var-table-text-color: #333333;
+}</code></pre>
+        <p style="margin-top: 10px; font-size: 14px; color: #666;">
+          <strong>Tips:</strong> Try hovering over the table rows to see the hover effect. 
+          Notice the alternating row backgrounds for better readability.
+        </p>
+      </div>
+    </div>
+    
+    <!-- Filter Panel Example -->
+    <div class="demo-section">
+      <h2>Filter Panel</h2>
+      <div class="ts-filter-panel">
+        <label for="search" style="display: block; margin-bottom: 8px; font-weight: 600;">Search</label>
+        <input type="text" id="search" class="ts-search-input" placeholder="Search for products, regions, or metrics...">
+      </div>
+    </div>
+    
+    <!-- Loading Spinner Example -->
+    <div class="demo-section">
+      <h2>Loading State</h2>
+      <div class="ts-loading-spinner"></div>
+    </div>
+    
+    <!-- Integration Code Example -->
+    <div class="demo-section">
+      <h2>Integration Code</h2>
+      <p>To use these styles in your ThoughtSpot embedded application:</p>
+      
+      <div class="code-block">
+        <code>
+import { init, AuthType } from '@thoughtspot/visual-embed-sdk';<br><br>
+
+init({<br>
+&nbsp;&nbsp;thoughtSpotHost: "https://your-instance.thoughtspot.cloud",<br>
+&nbsp;&nbsp;authType: AuthType.TrustedAuthToken,<br>
+&nbsp;&nbsp;customCssUrl: "https://your-domain.com/css/liveboard-starter.css"<br>
+});<br>
+        </code>
+      </div>
+      
+      <p>Or use one of the theme variations:</p>
+      <ul>
+        <li><code>css/themes/dark-theme.css</code> - Modern dark theme</li>
+        <li><code>css/themes/light-minimal.css</code> - Clean minimal theme</li>
+        <li><code>css/themes/corporate-blue.css</code> - Professional corporate theme</li>
+      </ul>
+    </div>
+    
+    <!-- Theme Switcher Demo -->
+    <div class="demo-section">
+      <h2>Try Different Themes</h2>
+      <p>To see how different themes look, replace the CSS file link in the &lt;head&gt; section:</p>
+      <div class="code-block">
+        <code>
+&lt;!-- Starter Theme (default) --&gt;<br>
+&lt;link rel="stylesheet" href="../css/liveboard-starter.css"&gt;<br><br>
+
+&lt;!-- Dark Theme --&gt;<br>
+&lt;link rel="stylesheet" href="../css/themes/dark-theme.css"&gt;<br><br>
+
+&lt;!-- Light Minimal Theme --&gt;<br>
+&lt;link rel="stylesheet" href="../css/themes/light-minimal.css"&gt;<br><br>
+
+&lt;!-- Corporate Blue Theme --&gt;<br>
+&lt;link rel="stylesheet" href="../css/themes/corporate-blue.css"&gt;<br>
+        </code>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

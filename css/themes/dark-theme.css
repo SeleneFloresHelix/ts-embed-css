@@ -1,0 +1,112 @@
+/**
+ * ThoughtSpot Embedded Liveboard - Dark Theme
+ * 
+ * A modern dark theme for ThoughtSpot embedded liveboards.
+ * This theme is ideal for applications with dark interfaces.
+ */
+
+/* ========================================================================
+   CUSTOM FONTS
+   ======================================================================== */
+
+@font-face {
+  font-family: 'TT Norms Pro Variable';
+  src: url('https://helix-builder.staging.helix.com/assets/TTNormsProVariable-b8ab4b19.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Dark Background Colors */
+  --ts-var-root-background: #1a1a1a;
+  --ts-var-root-color: #e0e0e0;
+  
+  /* Navigation Panel - Darker */
+  --ts-var-nav-background: #0d0d0d;
+  --ts-var-nav-color: #ffffff;
+  
+  /* Button Colors - Accent Blue */
+  --ts-var-button--primary-background: #2196f3;
+  --ts-var-button--primary-color: #ffffff;
+  --ts-var-button--primary--hover-background: #1976d2;
+  
+  --ts-var-button--secondary-background: #2a2a2a;
+  --ts-var-button--secondary-color: #e0e0e0;
+  --ts-var-button--secondary--hover-background: #333333;
+  
+  /* Chart Colors - Vibrant for Dark Background */
+  --ts-var-viz-color-1: #2196f3;
+  --ts-var-viz-color-2: #4caf50;
+  --ts-var-viz-color-3: #ff9800;
+  --ts-var-viz-color-4: #f44336;
+  --ts-var-viz-color-5: #9c27b0;
+  
+  /* Table Colors - Dark Theme */
+  --ts-var-table-header-background: #2a2a2a;
+  --ts-var-table-header-color: #e0e0e0;
+  --ts-var-table-header-border: #404040;
+  --ts-var-table-row-background: #1a1a1a;
+  --ts-var-table-row-alt-background: #1f1f1f;
+  --ts-var-table-row-hover-background: #2a2a2a;
+  --ts-var-table-border-color: #2a2a2a;
+  --ts-var-table-text-color: #e0e0e0;
+}
+
+.ts-root {
+  background: var(--ts-var-root-background);
+  color: var(--ts-var-root-color);
+}
+
+.liveboard-header {
+  background: #242424;
+  border-bottom: 1px solid #333333;
+}
+
+.liveboard-description {
+  color: #b0b0b0;
+}
+
+.visualization-tile {
+  background: #242424;
+  border: 1px solid #333333;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.visualization-tile:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.ts-table thead {
+  background: #2a2a2a;
+  border-bottom: 2px solid #404040;
+}
+
+.ts-table td {
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.ts-table tbody tr:hover {
+  background: #2a2a2a;
+}
+
+.ts-filter-panel {
+  background: #242424;
+  border: 1px solid #333333;
+}
+
+.ts-search-input {
+  background: #2a2a2a;
+  border: 1px solid #404040;
+  color: #e0e0e0;
+}
+
+.ts-search-input:focus {
+  border-color: var(--ts-var-button--primary-background);
+  background: #303030;
+}
+
+.ts-modal {
+  background: #242424;
+  color: #e0e0e0;
+}
