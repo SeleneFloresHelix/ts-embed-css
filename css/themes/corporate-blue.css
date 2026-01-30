@@ -1,0 +1,95 @@
+/**
+ * ThoughtSpot Embedded Liveboard - Corporate Blue Theme
+ * 
+ * A professional corporate theme with blue accents.
+ * Suitable for enterprise applications and dashboards.
+ */
+
+:root {
+  /* Corporate Colors */
+  --ts-var-root-background: #f8f9fa;
+  --ts-var-root-color: #212529;
+  
+  /* Navigation Panel - Corporate Blue */
+  --ts-var-nav-background: #003d82;
+  --ts-var-nav-color: #ffffff;
+  
+  /* Button Colors - Brand Blue */
+  --ts-var-button--primary-background: #0056b3;
+  --ts-var-button--primary-color: #ffffff;
+  --ts-var-button--primary--hover-background: #003d82;
+  
+  --ts-var-button--secondary-background: #e9ecef;
+  --ts-var-button--secondary-color: #212529;
+  --ts-var-button--secondary--hover-background: #dee2e6;
+  
+  /* Chart Colors - Professional Blue Scale */
+  --ts-var-viz-color-1: #0056b3;
+  --ts-var-viz-color-2: #007bff;
+  --ts-var-viz-color-3: #17a2b8;
+  --ts-var-viz-color-4: #6c757d;
+  --ts-var-viz-color-5: #20c997;
+}
+
+.ts-root {
+  background: var(--ts-var-root-background);
+  color: var(--ts-var-root-color);
+}
+
+.ts-nav-panel a:hover,
+.ts-nav-panel button:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.liveboard-header {
+  background: #ffffff;
+  border-bottom: 3px solid #0056b3;
+  padding: 20px 24px;
+}
+
+.liveboard-title {
+  color: #003d82;
+}
+
+.visualization-tile {
+  background: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.visualization-tile:hover {
+  box-shadow: 0 3px 10px rgba(0, 86, 179, 0.15);
+  border-color: #0056b3;
+}
+
+.visualization-title {
+  color: #003d82;
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 8px;
+}
+
+.ts-table thead {
+  background: #f1f3f5;
+  border-bottom: 2px solid #0056b3;
+}
+
+.ts-table th {
+  color: #003d82;
+}
+
+.ts-table tbody tr:hover {
+  background: #f1f8ff;
+}
+
+.ts-button--primary {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.ts-modal-header {
+  color: #003d82;
+  border-bottom: 2px solid #0056b3;
+  padding-bottom: 12px;
+}

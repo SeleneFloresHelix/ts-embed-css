@@ -1,0 +1,85 @@
+/**
+ * ThoughtSpot Embedded Liveboard - Light Minimal Theme
+ * 
+ * A clean, minimal light theme with subtle colors and borders.
+ * Perfect for a professional, uncluttered look.
+ */
+
+:root {
+  /* Minimal Light Colors */
+  --ts-var-root-background: #fafafa;
+  --ts-var-root-color: #2c3e50;
+  
+  /* Navigation Panel - Clean White */
+  --ts-var-nav-background: #ffffff;
+  --ts-var-nav-color: #2c3e50;
+  
+  /* Button Colors - Subtle Gray and Blue */
+  --ts-var-button--primary-background: #3498db;
+  --ts-var-button--primary-color: #ffffff;
+  --ts-var-button--primary--hover-background: #2980b9;
+  
+  --ts-var-button--secondary-background: #ecf0f1;
+  --ts-var-button--secondary-color: #2c3e50;
+  --ts-var-button--secondary--hover-background: #d5dbdb;
+  
+  /* Chart Colors - Professional Palette */
+  --ts-var-viz-color-1: #3498db;
+  --ts-var-viz-color-2: #2ecc71;
+  --ts-var-viz-color-3: #f39c12;
+  --ts-var-viz-color-4: #e74c3c;
+  --ts-var-viz-color-5: #9b59b6;
+}
+
+.ts-root {
+  background: var(--ts-var-root-background);
+  color: var(--ts-var-root-color);
+}
+
+.ts-nav-panel {
+  border-right: 1px solid #e1e8ed;
+}
+
+.liveboard-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e1e8ed;
+}
+
+.visualization-tile {
+  background: #ffffff;
+  border: 1px solid #e1e8ed;
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+.visualization-tile:hover {
+  border-color: #d5dbdb;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.ts-table thead {
+  background: #ffffff;
+  border-bottom: 2px solid #e1e8ed;
+}
+
+.ts-table td {
+  border-bottom: 1px solid #f7f9fa;
+}
+
+.ts-table tbody tr:hover {
+  background: #f7f9fa;
+}
+
+.ts-filter-panel {
+  background: #ffffff;
+  border: 1px solid #e1e8ed;
+}
+
+.ts-search-input {
+  border: 1px solid #d5dbdb;
+  background: #ffffff;
+}
+
+.ts-search-input:focus {
+  border-color: var(--ts-var-button--primary-background);
+}

@@ -1,0 +1,329 @@
+/**
+ * ThoughtSpot Embedded Liveboard - Starter CSS
+ * 
+ * This is a starter template for customizing the appearance of ThoughtSpot embedded liveboards.
+ * Use this file as a foundation and customize the CSS variables below to match your brand.
+ * 
+ * Usage:
+ * 1. Host this CSS file on a CDN or your web server
+ * 2. Reference it in your embed initialization:
+ *    init({
+ *      thoughtSpotHost: "https://your-instance.thoughtspot.cloud",
+ *      customCssUrl: "https://your-domain.com/css/liveboard-starter.css"
+ *    });
+ * 
+ * Note: The CSS URL must be allowlisted in your ThoughtSpot security settings (CSP-styles)
+ */
+
+/* ========================================================================
+   ROOT VARIABLES - Base Theme Colors and Settings
+   ======================================================================== */
+
+:root {
+  /* Primary Brand Colors */
+  --ts-var-root-background: #ffffff;
+  --ts-var-root-color: #333333;
+  
+  /* Navigation Panel */
+  --ts-var-nav-background: #1a1a1a;
+  --ts-var-nav-color: #ffffff;
+  
+  /* Button Colors - Primary */
+  --ts-var-button--primary-background: #1976d2;
+  --ts-var-button--primary-color: #ffffff;
+  --ts-var-button--primary--hover-background: #1565c0;
+  
+  /* Button Colors - Secondary */
+  --ts-var-button--secondary-background: #f5f5f5;
+  --ts-var-button--secondary-color: #333333;
+  --ts-var-button--secondary--hover-background: #e0e0e0;
+  
+  /* Chart Colors */
+  --ts-var-viz-color-1: #1976d2;
+  --ts-var-viz-color-2: #42a5f5;
+  --ts-var-viz-color-3: #64b5f6;
+  --ts-var-viz-color-4: #90caf9;
+  --ts-var-viz-color-5: #bbdefb;
+  
+  /* Typography */
+  --ts-var-root-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --ts-var-root-font-size: 14px;
+  --ts-var-root-line-height: 1.5;
+}
+
+/* ========================================================================
+   APPLICATION BACKGROUND
+   ======================================================================== */
+
+.ts-root {
+  background: var(--ts-var-root-background);
+  color: var(--ts-var-root-color);
+  font-family: var(--ts-var-root-font-family);
+  font-size: var(--ts-var-root-font-size);
+  line-height: var(--ts-var-root-line-height);
+}
+
+/* ========================================================================
+   NAVIGATION PANEL
+   ======================================================================== */
+
+.ts-nav-panel {
+  background: var(--ts-var-nav-background);
+  color: var(--ts-var-nav-color);
+}
+
+.ts-nav-panel a,
+.ts-nav-panel button {
+  color: var(--ts-var-nav-color);
+}
+
+.ts-nav-panel a:hover,
+.ts-nav-panel button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ========================================================================
+   BUTTONS AND INTERACTIVE ELEMENTS
+   ======================================================================== */
+
+/* Primary Buttons */
+.ts-button--primary,
+button.ts-button--primary {
+  background: var(--ts-var-button--primary-background);
+  color: var(--ts-var-button--primary-color);
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.ts-button--primary:hover,
+button.ts-button--primary:hover {
+  background: var(--ts-var-button--primary--hover-background);
+}
+
+/* Secondary Buttons */
+.ts-button--secondary,
+button.ts-button--secondary {
+  background: var(--ts-var-button--secondary-background);
+  color: var(--ts-var-button--secondary-color);
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.ts-button--secondary:hover,
+button.ts-button--secondary:hover {
+  background: var(--ts-var-button--secondary--hover-background);
+}
+
+/* ========================================================================
+   LIVEBOARD HEADER
+   ======================================================================== */
+
+.liveboard-header {
+  background: #fafafa;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 16px 24px;
+}
+
+.liveboard-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--ts-var-root-color);
+  margin: 0;
+}
+
+.liveboard-description {
+  font-size: 14px;
+  color: #666;
+  margin-top: 4px;
+}
+
+/* ========================================================================
+   VISUALIZATION TILES
+   ======================================================================== */
+
+.visualization-tile {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease;
+}
+
+.visualization-tile:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.visualization-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ts-var-root-color);
+  margin-bottom: 12px;
+}
+
+/* ========================================================================
+   CHARTS AND VISUALIZATIONS
+   ======================================================================== */
+
+/* Chart Container */
+.chart-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Chart Colors - Can be customized per visualization type */
+.chart-series-1 { fill: var(--ts-var-viz-color-1); stroke: var(--ts-var-viz-color-1); }
+.chart-series-2 { fill: var(--ts-var-viz-color-2); stroke: var(--ts-var-viz-color-2); }
+.chart-series-3 { fill: var(--ts-var-viz-color-3); stroke: var(--ts-var-viz-color-3); }
+.chart-series-4 { fill: var(--ts-var-viz-color-4); stroke: var(--ts-var-viz-color-4); }
+.chart-series-5 { fill: var(--ts-var-viz-color-5); stroke: var(--ts-var-viz-color-5); }
+
+/* ========================================================================
+   TABLES
+   ======================================================================== */
+
+.ts-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ts-table thead {
+  background: #f5f5f5;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.ts-table th {
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--ts-var-root-color);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ts-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  color: var(--ts-var-root-color);
+}
+
+.ts-table tbody tr:hover {
+  background: #fafafa;
+}
+
+/* ========================================================================
+   FILTERS AND SEARCH
+   ======================================================================== */
+
+.ts-filter-panel {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.ts-search-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.ts-search-input:focus {
+  outline: none;
+  border-color: var(--ts-var-button--primary-background);
+  box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.1);
+}
+
+/* ========================================================================
+   MODALS AND DIALOGS
+   ======================================================================== */
+
+.ts-modal-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+.ts-modal {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 24px;
+}
+
+.ts-modal-header {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--ts-var-root-color);
+}
+
+.ts-modal-footer {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+/* ========================================================================
+   LOADING STATES
+   ======================================================================== */
+
+.ts-loading-spinner {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid var(--ts-var-button--primary-background);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ========================================================================
+   RESPONSIVE DESIGN
+   ======================================================================== */
+
+@media (max-width: 768px) {
+  .liveboard-header {
+    padding: 12px 16px;
+  }
+  
+  .liveboard-title {
+    font-size: 20px;
+  }
+  
+  .visualization-tile {
+    margin: 4px;
+    padding: 12px;
+  }
+}
+
+/* ========================================================================
+   CUSTOM OVERRIDES
+   Add your custom styles below this section
+   ======================================================================== */
