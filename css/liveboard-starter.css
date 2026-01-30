@@ -420,3 +420,18 @@ button.ts-button--secondary:hover {
   margin: 12px 0 !important;
   /* Space around separator */
 }
+
+/* =====================================================
+   Hide scrollbars in Liveboard tiles
+   ===================================================== */
+.pinboard-note-tile-module__normalMode {
+  overflow: auto !important;
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.pinboard-note-tile-module__normalMode::-webkit-scrollbar {
+  width: 0px;
+  /* Chrome, Safari */
+  background: transparent;
+}
