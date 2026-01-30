@@ -387,4 +387,21 @@ button.ts-button--secondary:hover {
 /* ========================================================================
    CUSTOM OVERRIDES
    Add your custom styles below this section
-   ======================================================================== */
+======================================================================== */
+
+/* =====================================================
+  Remove borders from tables inside notes
+===================================================== */
+
+.ts-lb-note table {
+  border-collapse: collapse !important;
+  /* Remove spacing */
+  border: none !important;
+  /* Remove outer border */
+}
+
+.ts-lb-note table th,
+.ts-lb-note table td {
+  border: none !important;
+  /* Remove cell borders */
+}
