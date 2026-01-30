@@ -34,39 +34,39 @@
 :root {
   /* Primary Brand Colors */
   --ts-var-root-background: #ffffff;
-  --ts-var-root-color: #333333;
-  
+  --ts-var-root-color: #3F4C77;
+
   /* Navigation Panel */
-  --ts-var-nav-background: #1a1a1a;
+  --ts-var-nav-background: #1D232F;
   --ts-var-nav-color: #ffffff;
-  
+
   /* Button Colors - Primary */
-  --ts-var-button--primary-background: #1976d2;
+  --ts-var-button--primary-background: #0B6FC2;
   --ts-var-button--primary-color: #ffffff;
-  --ts-var-button--primary--hover-background: #1565c0;
-  
+  --ts-var-button--primary--hover-background: #09599B;
+
   /* Button Colors - Secondary */
   --ts-var-button--secondary-background: #f5f5f5;
   --ts-var-button--secondary-color: #333333;
   --ts-var-button--secondary--hover-background: #e0e0e0;
-  
+
   /* Chart Colors */
-  --ts-var-viz-color-1: #1976d2;
-  --ts-var-viz-color-2: #42a5f5;
-  --ts-var-viz-color-3: #64b5f6;
-  --ts-var-viz-color-4: #90caf9;
-  --ts-var-viz-color-5: #bbdefb;
-  
+  --ts-var-viz-color-1: #3B8CCE;
+  --ts-var-viz-color-2: #62A25A;
+  --ts-var-viz-color-3: #C34969;
+  --ts-var-viz-color-4: #D3A209;
+  --ts-var-viz-color-5: #61C5C7;
+
   /* Table Colors */
-  --ts-var-table-header-background: #f5f5f5;
-  --ts-var-table-header-color: #333333;
+  --ts-var-table-header-background: #9DC5E7;
+  --ts-var-table-header-color: #3F4C77;
   --ts-var-table-header-border: #e0e0e0;
   --ts-var-table-row-background: #ffffff;
-  --ts-var-table-row-alt-background: #fafafa;
+  --ts-var-table-row-alt-background: #E7F1F9;
   --ts-var-table-row-hover-background: #f5f5f5;
   --ts-var-table-border-color: #f0f0f0;
-  --ts-var-table-text-color: #333333;
-  
+  --ts-var-table-text-color: #657092;
+
   /* Typography */
   --ts-var-root-font-family: 'TT Norms Pro Variable', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --ts-var-root-font-size: 14px;
@@ -204,11 +204,30 @@ button.ts-button--secondary:hover {
 }
 
 /* Chart Colors - Can be customized per visualization type */
-.chart-series-1 { fill: var(--ts-var-viz-color-1); stroke: var(--ts-var-viz-color-1); }
-.chart-series-2 { fill: var(--ts-var-viz-color-2); stroke: var(--ts-var-viz-color-2); }
-.chart-series-3 { fill: var(--ts-var-viz-color-3); stroke: var(--ts-var-viz-color-3); }
-.chart-series-4 { fill: var(--ts-var-viz-color-4); stroke: var(--ts-var-viz-color-4); }
-.chart-series-5 { fill: var(--ts-var-viz-color-5); stroke: var(--ts-var-viz-color-5); }
+.chart-series-1 {
+  fill: var(--ts-var-viz-color-1);
+  stroke: var(--ts-var-viz-color-1);
+}
+
+.chart-series-2 {
+  fill: var(--ts-var-viz-color-2);
+  stroke: var(--ts-var-viz-color-2);
+}
+
+.chart-series-3 {
+  fill: var(--ts-var-viz-color-3);
+  stroke: var(--ts-var-viz-color-3);
+}
+
+.chart-series-4 {
+  fill: var(--ts-var-viz-color-4);
+  stroke: var(--ts-var-viz-color-4);
+}
+
+.chart-series-5 {
+  fill: var(--ts-var-viz-color-5);
+  stroke: var(--ts-var-viz-color-5);
+}
 
 /* ========================================================================
    TABLES
@@ -330,8 +349,13 @@ button.ts-button--secondary:hover {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* ========================================================================
@@ -342,11 +366,11 @@ button.ts-button--secondary:hover {
   .liveboard-header {
     padding: 12px 16px;
   }
-  
+
   .liveboard-title {
     font-size: 20px;
   }
-  
+
   .visualization-tile {
     margin: 4px;
     padding: 12px;
