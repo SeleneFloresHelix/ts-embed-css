@@ -82,14 +82,34 @@ The starter CSS uses CSS variables for easy customization. Modify these in the `
   --ts-var-table-row-hover-background: #f5f5f5;
   --ts-var-table-border-color: #f0f0f0;
   --ts-var-table-text-color: #333333;
+  
+  /* Typography */
+  --ts-var-root-font-family: 'TT Norms Pro Variable', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 ```
+
+### Custom Font
+
+All CSS files include the **TT Norms Pro Variable** font, a modern variable font that supports weights from 100 to 900. The font is loaded from a CDN and includes fallbacks to system fonts:
+
+```css
+@font-face {
+  font-family: 'TT Norms Pro Variable';
+  src: url('https://helix-builder.staging.helix.com/assets/TTNormsProVariable-b8ab4b19.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+```
+
+The `font-display: swap` ensures text remains visible during font loading, preventing layout shifts.
 
 ### Available Themes
 
 #### 1. Starter Theme (`liveboard-starter.css`)
 A comprehensive base template with:
 - Clean, modern design
+- **TT Norms Pro Variable font** for professional typography
 - Responsive layout
 - Comprehensive component coverage
 - Well-documented sections
