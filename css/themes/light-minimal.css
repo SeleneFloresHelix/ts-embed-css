@@ -29,6 +29,16 @@
   --ts-var-viz-color-3: #f39c12;
   --ts-var-viz-color-4: #e74c3c;
   --ts-var-viz-color-5: #9b59b6;
+  
+  /* Table Colors - Light Minimal */
+  --ts-var-table-header-background: #ffffff;
+  --ts-var-table-header-color: #2c3e50;
+  --ts-var-table-header-border: #e1e8ed;
+  --ts-var-table-row-background: #ffffff;
+  --ts-var-table-row-alt-background: #f7f9fa;
+  --ts-var-table-row-hover-background: #f7f9fa;
+  --ts-var-table-border-color: #f7f9fa;
+  --ts-var-table-text-color: #2c3e50;
 }
 
 .ts-root {

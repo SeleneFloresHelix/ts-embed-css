@@ -69,7 +69,19 @@ The starter CSS uses CSS variables for easy customization. Modify these in the `
   /* Chart Colors */
   --ts-var-viz-color-1: #1976d2;
   --ts-var-viz-color-2: #42a5f5;
-  /* ... more colors */
+  --ts-var-viz-color-3: #64b5f6;
+  --ts-var-viz-color-4: #90caf9;
+  --ts-var-viz-color-5: #bbdefb;
+  
+  /* Table Colors */
+  --ts-var-table-header-background: #f5f5f5;
+  --ts-var-table-header-color: #333333;
+  --ts-var-table-header-border: #e0e0e0;
+  --ts-var-table-row-background: #ffffff;
+  --ts-var-table-row-alt-background: #fafafa;
+  --ts-var-table-row-hover-background: #f5f5f5;
+  --ts-var-table-border-color: #f0f0f0;
+  --ts-var-table-text-color: #333333;
 }
 ```
 
@@ -135,6 +147,7 @@ The CSS files include styles for:
   --ts-var-button--primary-background: #ff6b6b;  /* Your primary color */
   --ts-var-button--primary--hover-background: #ee5a52;
   
+  /* Chart color palette */
   --ts-var-viz-color-1: #ff6b6b;  /* Brand red */
   --ts-var-viz-color-2: #4ecdc4;  /* Brand teal */
   --ts-var-viz-color-3: #45b7d1;  /* Brand blue */
@@ -142,6 +155,45 @@ The CSS files include styles for:
   --ts-var-viz-color-5: #6c5ce7;  /* Brand purple */
 }
 ```
+
+### Customizing Chart Colors
+
+The 5 chart color variables (`--ts-var-viz-color-1` through `--ts-var-viz-color-5`) control the color palette used in visualizations. These colors are applied to:
+- Bar charts
+- Line charts
+- Pie charts
+- Area charts
+- Other data visualizations
+
+**Preview your chart colors** in the `examples/index.html` file to see how they look before deploying.
+
+### Customizing Table Appearance
+
+Tables support extensive customization through 8 CSS variables:
+
+```css
+:root {
+  /* Header styling */
+  --ts-var-table-header-background: #f5f5f5;  /* Header background color */
+  --ts-var-table-header-color: #333333;       /* Header text color */
+  --ts-var-table-header-border: #e0e0e0;      /* Header bottom border */
+  
+  /* Row styling */
+  --ts-var-table-row-background: #ffffff;           /* Default row background */
+  --ts-var-table-row-alt-background: #fafafa;       /* Alternating row background */
+  --ts-var-table-row-hover-background: #f5f5f5;     /* Hover state background */
+  
+  /* Text and borders */
+  --ts-var-table-border-color: #f0f0f0;       /* Cell border color */
+  --ts-var-table-text-color: #333333;         /* Cell text color */
+}
+```
+
+**Features:**
+- Alternating row colors for better readability
+- Customizable hover states
+- Independent header and body styling
+- Full color control for borders and text
 
 ### Using Multiple CSS Files
 

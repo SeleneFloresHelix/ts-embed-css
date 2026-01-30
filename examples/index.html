@@ -76,6 +76,44 @@
       <button class="ts-button--secondary">Secondary Action</button>
     </div>
     
+    <!-- Chart Color Palette Preview -->
+    <div class="demo-section">
+      <h2>Chart Color Palette</h2>
+      <p>These are the 5 customizable chart colors used in visualizations:</p>
+      <div style="display: flex; gap: 16px; margin-top: 16px; flex-wrap: wrap;">
+        <div style="text-align: center;">
+          <div class="chart-series-1" style="width: 100px; height: 100px; border-radius: 8px; margin-bottom: 8px;"></div>
+          <code style="font-size: 12px;">--ts-var-viz-color-1</code>
+        </div>
+        <div style="text-align: center;">
+          <div class="chart-series-2" style="width: 100px; height: 100px; border-radius: 8px; margin-bottom: 8px;"></div>
+          <code style="font-size: 12px;">--ts-var-viz-color-2</code>
+        </div>
+        <div style="text-align: center;">
+          <div class="chart-series-3" style="width: 100px; height: 100px; border-radius: 8px; margin-bottom: 8px;"></div>
+          <code style="font-size: 12px;">--ts-var-viz-color-3</code>
+        </div>
+        <div style="text-align: center;">
+          <div class="chart-series-4" style="width: 100px; height: 100px; border-radius: 8px; margin-bottom: 8px;"></div>
+          <code style="font-size: 12px;">--ts-var-viz-color-4</code>
+        </div>
+        <div style="text-align: center;">
+          <div class="chart-series-5" style="width: 100px; height: 100px; border-radius: 8px; margin-bottom: 8px;"></div>
+          <code style="font-size: 12px;">--ts-var-viz-color-5</code>
+        </div>
+      </div>
+      <div style="margin-top: 20px; padding: 15px; background: #f9f9f9; border-radius: 4px;">
+        <strong>Customization Example:</strong>
+        <pre style="margin-top: 10px; background: white; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>:root {
+  --ts-var-viz-color-1: #1976d2;  /* Primary blue */
+  --ts-var-viz-color-2: #42a5f5;  /* Light blue */
+  --ts-var-viz-color-3: #64b5f6;  /* Lighter blue */
+  --ts-var-viz-color-4: #90caf9;  /* Pale blue */
+  --ts-var-viz-color-5: #bbdefb;  /* Very pale blue */
+}</code></pre>
+      </div>
+    </div>
+    
     <!-- Visualization Tile Example -->
     <div class="demo-section">
       <h2>Visualization Tile</h2>
@@ -118,8 +156,43 @@
             <td>1,567</td>
             <td>+15.7%</td>
           </tr>
+          <tr>
+            <td>Product D</td>
+            <td>$203,400</td>
+            <td>2,145</td>
+            <td>+18.2%</td>
+          </tr>
+          <tr>
+            <td>Product E</td>
+            <td>$87,600</td>
+            <td>756</td>
+            <td>+5.8%</td>
+          </tr>
         </tbody>
       </table>
+      <div style="margin-top: 20px; padding: 15px; background: #f9f9f9; border-radius: 4px;">
+        <strong>Table Color Customization:</strong>
+        <p style="margin-top: 10px; margin-bottom: 10px;">The following CSS variables control table appearance:</p>
+        <pre style="background: white; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>:root {
+  /* Table header styling */
+  --ts-var-table-header-background: #f5f5f5;
+  --ts-var-table-header-color: #333333;
+  --ts-var-table-header-border: #e0e0e0;
+  
+  /* Table row styling */
+  --ts-var-table-row-background: #ffffff;
+  --ts-var-table-row-alt-background: #fafafa;  /* Alternating rows */
+  --ts-var-table-row-hover-background: #f5f5f5;  /* Hover state */
+  
+  /* Table text and borders */
+  --ts-var-table-border-color: #f0f0f0;
+  --ts-var-table-text-color: #333333;
+}</code></pre>
+        <p style="margin-top: 10px; font-size: 14px; color: #666;">
+          <strong>Tips:</strong> Try hovering over the table rows to see the hover effect. 
+          Notice the alternating row backgrounds for better readability.
+        </p>
+      </div>
     </div>
     
     <!-- Filter Panel Example -->
